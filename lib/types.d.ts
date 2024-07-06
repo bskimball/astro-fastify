@@ -6,6 +6,7 @@ export type ServerArgs = {
   assetsPrefix: string;
   port: number | undefined;
   logger: FastifyServerOptions['logger'] | undefined;
+  maxParamLength: FastifyServerOptions['maxParamLength'] | undefined;
 };
 
 export type DefineFastifyRoutes = (fastify: FastifyInstance) => void;
@@ -18,7 +19,7 @@ export type IntegrationOptions = {
   /**
    * The port to use in __production__. In development mode fastify runs
    * on the Vite server.
-   * 
+   *
    * By default @matthewp/astro-fastify uses process.env.PORT which most hosts will
    * define, and you don't need to set this. If you do set this option it will override
    * any host variables.
