@@ -7,6 +7,7 @@ export type ServerArgs = {
   port: number | undefined;
   logger: FastifyServerOptions['logger'] | undefined;
   maxParamLength: FastifyServerOptions['maxParamLength'] | undefined;
+  host: string | undefined;
 };
 
 export type DefineFastifyRoutes = (fastify: FastifyInstance) => void;
